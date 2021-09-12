@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import dk.easj.anbo.viewmodelsimpleexample.databinding.FragmentFirstBinding
 
@@ -17,7 +16,7 @@ class FirstFragment : Fragment() {
     private var _binding: FragmentFirstBinding? = null
 
     // https://developer.android.com/topic/libraries/architecture/viewmodel
-    private val viewModel: MyViewModel by activityViewModels()
+    private val viewModel: PersonViewModel by activityViewModels()
 
     // This property is only valid between onCreateView and
     // onDestroyView.

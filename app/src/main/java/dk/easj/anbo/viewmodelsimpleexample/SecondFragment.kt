@@ -17,7 +17,7 @@ class SecondFragment : Fragment() {
     private var _binding: FragmentSecondBinding? = null
 
     // https://developer.android.com/topic/libraries/architecture/viewmodel
-    private val viewModel: MyViewModel by activityViewModels()
+    private val viewModel: PersonViewModel by activityViewModels()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
