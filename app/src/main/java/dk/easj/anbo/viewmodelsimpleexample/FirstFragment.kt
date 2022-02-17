@@ -9,17 +9,12 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import dk.easj.anbo.viewmodelsimpleexample.databinding.FragmentFirstBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
 class FirstFragment : Fragment() {
     private var _binding: FragmentFirstBinding? = null
 
     // https://developer.android.com/topic/libraries/architecture/viewmodel
     private val viewModel: PersonViewModel by activityViewModels()
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -49,13 +44,13 @@ class FirstFragment : Fragment() {
             viewModel.age.value = ageStr.toInt()
         }
 
-        viewModel.name.observe(viewLifecycleOwner, { name ->
+        viewModel.name.observe(viewLifecycleOwner) { name ->
             binding.textviewHello.text = "Hello $name"
-        })
+        }
 
-        viewModel.age.observe(viewLifecycleOwner, { age ->
+        viewModel.age.observe(viewLifecycleOwner) { age ->
             binding.textviewHello.text = "Age $age"
-        })
+        }
 
         binding.buttonNext.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
