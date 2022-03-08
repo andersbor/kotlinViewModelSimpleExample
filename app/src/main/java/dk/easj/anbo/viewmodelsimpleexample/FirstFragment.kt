@@ -45,11 +45,11 @@ class FirstFragment : Fragment() {
         }
 
         viewModel.name.observe(viewLifecycleOwner) { name ->
-            binding.textviewHello.text = "Hello $name"
+            binding.textviewName.text = "Hello $name"
         }
 
         viewModel.age.observe(viewLifecycleOwner) { age ->
-            binding.textviewHello.text = "Age $age"
+            binding.textviewAge.text = "$age years old"
         }
 
         binding.buttonNext.setOnClickListener {
