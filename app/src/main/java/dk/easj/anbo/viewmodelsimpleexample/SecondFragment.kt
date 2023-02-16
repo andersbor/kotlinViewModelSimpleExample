@@ -11,10 +11,10 @@ import dk.easj.anbo.viewmodelsimpleexample.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
     private var _binding: FragmentSecondBinding? = null
+    private val binding get() = _binding!!
 
     // https://developer.android.com/topic/libraries/architecture/viewmodel
     private val viewModel: PersonViewModel by activityViewModels()
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
