@@ -30,7 +30,7 @@
         android:id="@+id/button_greet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Greet" />
+        android:text="Save and Greet" />
 
     <Button
         android:id="@+id/button_next"
